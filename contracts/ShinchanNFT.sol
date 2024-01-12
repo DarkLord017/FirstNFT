@@ -29,15 +29,6 @@ contract TVCharactersNFT is ERC721URIStorage{
         return newItemId;
     }
 
-    function _setTokenURI(uint256 tokenId, string memory _tokenURI) internal virtual override {
-        
-        _tokenURIs[tokenId] = _tokenURI;
-    }
-
-    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
-        
-        return _tokenURIs[tokenId];
-    }
 
 
     function changeImage(uint256 tokenId, string memory newTokenURI) public {
